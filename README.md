@@ -10,3 +10,6 @@ With an specified input (containing sentences), the program will give you as an 
 
 ### 2. Prime challenge
 This program gives you all the prime numbers until a limit. The idea was to play with continue/break in loops, to get an optimized performance.
+
+### 3. Server status
+An imitation of a server up and down. If the server is down, we return None. If the server is up, we return the message. The difficulty is that each message has only a certain percent of chance to be successful. So it was needed to give some tries before considering the server down.
