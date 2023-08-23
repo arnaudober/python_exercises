@@ -13,3 +13,6 @@ This program gives you all the prime numbers until a limit. The idea was to play
 
 ### 3. Server status
 An imitation of a server up and down. If the server is down, we return None. If the server is up, we return the message. The difficulty is that each message has only a certain percent of chance to be successful. So it was needed to give some tries before considering the server down.
+
+### 4. Messenger extension
+The exercise is about extending an existing class, to implement custom methods. I also added some minor features like clearing the messages after printed them out, or declaring the messages array as a private attribute, so it's inaccessible outside of the class definition.
