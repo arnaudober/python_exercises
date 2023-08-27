@@ -16,3 +16,9 @@ An imitation of a server up and down. If the server is down, we return None. If 
 
 ### 4. Messenger extension
 The exercise is about extending an existing class, to implement custom methods. I also added some minor features like clearing the messages after printed them out, or declaring the messages array as a private attribute, so it's inaccessible outside of the class definition.
+
+### 5. Band Name Generator
+From Udemy Python Bootcamp 2023. Generates a band name based on hometown and pet's name, input by the user.
+
+### 6. Tip Calculator
+From Udemy Python Bootcamp 2023. Calculates a tip by asking the total bill, percentage tip and number of people to split with.
