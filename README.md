@@ -28,3 +28,6 @@ Calculates a tip by asking the total bill, percentage tip and number of people t
 
 ### 7. Treasure Island End
 Do you remember these adventure books where you could choose the progression of the story? This program is one like that. The goal was to use conditions (remember: Switch don't exist in Python!)
+
+### 8. Rock Paper Scissors
+I don't think I need to introduce this famous game. Using ASCII art, it's a user vs computer game. Using functions, lists, ASCII art, random module and conditions.
