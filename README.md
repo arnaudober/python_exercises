@@ -32,5 +32,9 @@ Do you remember these adventure books where you could choose the progression of 
 ### 8. Rock Paper Scissors
 I don't think I need to introduce this famous game. Using ASCII art, it's a user vs computer game. Using functions, lists, ASCII art, random module and conditions.
 
-### 9. Hangman
+### 9. Password generator
+A simple password generator. You choose the count of letters/symbols/numbers for your password. The password is created with random characters/positions corresponding to your requirements (e.g. 2 letters & 2 symbols will give you a 4 length password, with random letters and symbols, at random positions).
+
+
+### 10. Hangman
 Once again a classic game. What I tried to work on with this challenge is the flow chart. And splitting the development in multiple steps, incremental, from simple to more difficult.
