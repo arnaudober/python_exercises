@@ -31,3 +31,6 @@ Do you remember these adventure books where you could choose the progression of 
 
 ### 8. Rock Paper Scissors
 I don't think I need to introduce this famous game. Using ASCII art, it's a user vs computer game. Using functions, lists, ASCII art, random module and conditions.
+
+### 9. Hangman
+Once again a classic game. What I tried to work on with this challenge is the flow chart. And splitting the development in multiple steps, incremental, from simple to more difficult.
