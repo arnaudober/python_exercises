@@ -27,3 +27,6 @@ Once again a classic game. What I tried to work on with this challenge is the fl
 
 ### 7. Caesar Cipher
 Encryption/decryption methods using Python. Goal was to play with methods, refactor them, reuse them, etc, to fully understand them.
+
+### 8. Silent Auction
+Playing with dictionaries and lists, the goal was to create a silent auction, and return the winner at the end of the program, who has the highest bid.
