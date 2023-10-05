@@ -30,3 +30,6 @@ Encryption/decryption methods using Python. Goal was to play with methods, refac
 
 ### 8. Silent Auction
 Playing with dictionaries and lists, the goal was to create a silent auction, and return the winner at the end of the program, who has the highest bid.
+
+### 9. Calculator
+This time, we played with functions and storing functions in a dictionary. The main function is recursive as well.
