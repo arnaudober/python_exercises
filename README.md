@@ -33,3 +33,6 @@ Playing with dictionaries and lists, the goal was to create a silent auction, an
 
 ### 9. Calculator
 This time, we played with functions and storing functions in a dictionary. The main function is recursive as well.
+
+### <u>10. Blackjack</u>
+A wrap up project to use all the things we learnt so far. By creating the chart flow, to the full development of the program.
