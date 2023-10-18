@@ -41,16 +41,17 @@ def is_game_over(player_score, computer_score):
 
 
 def play_next_move(player_cards, computer_cards):
-    print(f"Your cards: {player_cards}, current score: {sum(player_cards)}")
-    print(f"Computer's first card: {computer_cards[0]}")
+    print(f"\tYour cards: {player_cards}, current score: {sum(player_cards)}")
+    print(f"\tComputer's first card: {computer_cards[0]}")
 
     game_over = is_game_over(sum(player_cards), sum(computer_cards))
     if game_over:
-        start_game()
+        return
 
     pick_another_card = input("Tap 'y' to get another card, type 'n' to pass: ")
     if pick_another_card == 'y':
         player_cards.append(draw_card())
+        computer_cards.append(draw_card())
     else:
         computer_cards.append(draw_card())
 
@@ -68,6 +69,8 @@ def start_game():
         computer_cards = [draw_card(), draw_card()]
 
         play_next_move(player_cards, computer_cards)
+
+        continue_playing = input("Do you want to play a game of blackjack? Type 'y' or 'n': ")
 
 
 start_game()
