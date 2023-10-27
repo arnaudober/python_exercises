@@ -36,3 +36,6 @@ This time, we played with functions and storing functions in a dictionary. The m
 
 ### <u>10. Blackjack</u>
 A wrap up project to use all the things we learnt so far. By creating the chart flow, to the full development of the program.
+
+### 11. Guess the number
+A simple game where the computer chooses a random number, and the user has to guess it. The computer will give hints to the user to help him find the number. The user has 10 attempts to find the number.
