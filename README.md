@@ -37,6 +37,8 @@ This time, we played with functions and storing functions in a dictionary. The m
 ### <u>10. Blackjack</u>
 A wrap up project to use all the things we learnt so far. By creating the chart flow, to the full development of the program.
 
-### <u>11. Higher Lower Followers</u>
+### <u>11. Guess the number</u>
+A simple game where the computer chooses a random number, and the user has to guess it. The computer will give hints to the user to help him find the number. The user has 10 attempts to find the number.
 
+### <u>12. Higher Lower Followers</u>
 A game where you have to guess which Instagram account has the most followers.
