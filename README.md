@@ -42,3 +42,7 @@ A simple game where the computer chooses a random number, and the user has to gu
 
 ### <u>12. Higher Lower Followers</u>
 A game where you have to guess which Instagram account has the most followers.
+
+### 13. Coffee Machine
+
+A simple coffee machine program. The user can choose between 3 types of coffee, and the machine will ask for the money.
