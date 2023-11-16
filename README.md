@@ -45,4 +45,5 @@ A game where you have to guess which Instagram account has the most followers.
 
 ### 13. Coffee Machine
 
-A simple coffee machine program. The user can choose between 3 types of coffee, and the machine will ask for the money.
+A simple coffee machine program. The user can choose between 3 types of coffee, and the machine will ask for the
+money. (procedural and OOP versions)
