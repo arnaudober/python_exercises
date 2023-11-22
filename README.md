@@ -2,16 +2,16 @@
 
 Here are some Python exercises I worked on to learn this language.
 
-> [!NOTE]
-> In the folder /linkedin_learning, you can find some exercises I worked on when watching the LinkedIn
-> Learning course created by Ryan Mitchell.   
-> [Access LinkedIn Learning Course](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-essential-training-18764650%3Ftrk%3Dshare_ent_url%26shareId%3DhOmHTWo6ScGy%252BMAJ0b8lEQ%253D%253D)
+> [!TIP]
+> Most playful and complex exercises to develop are marked with a :star: emoji.
 
 Above, all exercises come from Udemy Python Bootcamp 2023. I didn't described all exercises in this file as there are a
 lot of them. I only described the final exercise of each chapter of the lesson.
 
-> [!TIP]
-> Most playful and complex exercises to develop are marked with a :star: emoji.
+> [!NOTE]
+> In the folder /linkedin_learning, you can find some exercises I worked on when watching the LinkedIn
+> Learning course created by Ryan Mitchell.   
+> [Access LinkedIn Learning Course](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-essential-training-18764650%3Ftrk%3Dshare_ent_url%26shareId%3DhOmHTWo6ScGy%252BMAJ0b8lEQ%253D%253D)
 
 ### 1. Band Name Generator
 
