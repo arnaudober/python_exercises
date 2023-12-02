@@ -78,4 +78,8 @@ money. (procedural and OOP versions)
 ### 14. Quiz Game :star:
 
 A simple quiz game. The user has to answer 10 questions, and the program will return the score at the end. I load the
-questions dynamically from OpenTrivia DB API, using urllib and json modules. 
+questions dynamically from OpenTrivia DB API, using urllib and json modules.
+
+### 15. Turtle exercises
+
+Some exercises with the Turtle package. Drawing a square and a dashed line.
