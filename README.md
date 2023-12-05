@@ -82,4 +82,4 @@ questions dynamically from OpenTrivia DB API, using urllib and json modules.
 
 ### 15. Turtle exercises
 
-Some exercises with the Turtle package. Drawing a square, drawing a dashed line and a random walk.
+Some exercises with the Turtle package. Drawing a square, drawing a dashed line and a random walk, drawing a Spirograph.
