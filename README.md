@@ -84,3 +84,7 @@ questions dynamically from OpenTrivia DB API, using urllib and json modules.
 
 Some exercises with the Turtle package. Drawing a square, drawing a dashed line and a random walk, drawing a Spirograph.
 The final project paints a Hirst painting (dots of different colors, on a grid).
+
+### 16. Etch a Sketch
+
+A simple Etch a Sketch game, using the Turtle package.
