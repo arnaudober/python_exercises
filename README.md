@@ -87,4 +87,8 @@ The final project paints a Hirst painting (dots of different colors, on a grid).
 
 ### 16. Etch a Sketch
 
-A simple Etch a Sketch game, using the Turtle package.
+A simple Etch a Sketch game, using the Turtle package
+
+### 17. Turtles race
+
+A race between multiple turtles with different colors. You can bet on the winning color!
