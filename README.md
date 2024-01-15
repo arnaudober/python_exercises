@@ -92,3 +92,6 @@ A simple Etch a Sketch game, using the Turtle package
 ### 17. Turtles race
 
 A race between multiple turtles with different colors. You can bet on the winning color!
+
+### 18. Snake game
+A classic snake game, like you can find on Nokia 3310. 
