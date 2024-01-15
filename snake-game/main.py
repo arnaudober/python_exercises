@@ -31,5 +31,10 @@ while game_is_on:
         food.refresh()
         board.increase_score()
 
+    hit_horizontal_wall = snake.head.xcor() > 280 or snake.head.xcor() < -280
+    hit_vertical_wall = snake.head.ycor() > 280 or snake.head.ycor() < -280
+    if hit_horizontal_wall or hit_vertical_wall:
+        game_is_on = False
+        board.game_over()
 
 screen.exitonclick()
