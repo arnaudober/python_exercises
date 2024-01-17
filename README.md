@@ -95,3 +95,6 @@ A race between multiple turtles with different colors. You can bet on the winnin
 
 ### 18. Snake game
 A classic snake game, like you can find on Nokia 3310. 
+
+### 19. Pong game
+A classic pong game, with 2 players.
