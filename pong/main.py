@@ -2,6 +2,7 @@ from turtle import Screen
 from paddle import *
 from ball import *
 from scoreboard import *
+from playsound import playsound
 import time
 
 # Screen
@@ -43,8 +44,8 @@ while game_is_on:
     touches_right_paddle = paddle1.distance(ball) < 50 and ball.xcor() > 320
     touches_left_paddle = paddle2.distance(ball) < 50 and ball.xcor() < -320
     if touches_right_paddle or touches_left_paddle:
+        playsound("./bounce.mp3", False)
         ball.bounce_x()
-        print(ball.current_speed)
 
     ball_is_beyond_right_paddle = ball.xcor() > 380
     ball_is_beyond_left_paddle = ball.xcor() < -380
