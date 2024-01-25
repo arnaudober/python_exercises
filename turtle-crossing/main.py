@@ -12,6 +12,8 @@ player = Player()
 screen.listen()
 screen.onkeypress(player.up, "Up")
 
+scoreboard = Scoreboard()
+
 car_manager = CarManager()
 
 
@@ -19,16 +21,18 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    scoreboard.print_level()
 
     car_manager.create_car()
     car_manager.move()
 
     if car_manager.detect_collision(player):
-        # We lost
+        scoreboard.game_over()
         game_is_on = False
         
     if player.has_reached_other_side():
         player.go_to_start()
         car_manager.speed_up()
+        scoreboard.increase_level()
 
 screen.exitonclick()
