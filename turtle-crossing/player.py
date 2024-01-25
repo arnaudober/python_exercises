@@ -9,7 +9,7 @@ class Player(Turtle):
     def __init__(self):
         super().__init__()
         self.shape("turtle")
-        self.left(90)
+        self.setheading(90)
         self.penup()
         self.setposition(STARTING_POSITION)
 
