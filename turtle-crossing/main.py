@@ -18,9 +18,13 @@ car_manager = CarManager()
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
-    car_manager.move()
     screen.update()
 
     car_manager.create_car()
+    car_manager.move()
+
+    if car_manager.detect_collision(player):
+        # We lost
+        game_is_on = False
 
 screen.exitonclick()

@@ -26,3 +26,10 @@ class CarManager:
     def move(self):
         for car in self.cars:
             car.forward(STARTING_MOVE_DISTANCE)
+
+    def detect_collision(self, player):
+        for car in self.cars:
+            if car.distance(player) < 20:
+                return True
+            
+        return False
