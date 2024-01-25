@@ -26,5 +26,9 @@ while game_is_on:
     if car_manager.detect_collision(player):
         # We lost
         game_is_on = False
+        
+    if player.has_reached_other_side():
+        player.go_to_start()
+        car_manager.speed_up()
 
 screen.exitonclick()
