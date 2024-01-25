@@ -98,3 +98,6 @@ A classic snake game, like you can find on Nokia 3310.
 
 ### 19. Pong game
 A classic pong game, with 2 players.
+
+### 20. Turtle crossing game
+A fun and challenging game where the player controls a turtle trying to cross a busy road. The goal is to safely guide the turtle to the other side without getting hit by passing cars.
