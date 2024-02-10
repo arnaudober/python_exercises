@@ -101,3 +101,6 @@ A classic pong game, with 2 players.
 
 ### 20. Turtle crossing game
 A fun and challenging game where the player controls a turtle trying to cross a busy road. The goal is to safely guide the turtle to the other side without getting hit by passing cars.
+
+### 21. NATO Alphabet
+The user inputs a word, and the program returns a phonetic code for this word (e.g: NATO - ['November', 'Alfa', 'Tango', 'Oscar'])
