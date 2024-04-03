@@ -10,7 +10,7 @@ lot of them. I only described the final exercise of each chapter of the lesson.
 
 > [!NOTE]
 > In the folder /linkedin_learning, you can find some exercises I worked on when watching the LinkedIn
-> Learning course created by Ryan Mitchell.   
+> Learning course created by Ryan Mitchell.
 > [Access LinkedIn Learning Course](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-essential-training-18764650%3Ftrk%3Dshare_ent_url%26shareId%3DhOmHTWo6ScGy%252BMAJ0b8lEQ%253D%253D)
 
 ### 1. Band Name Generator
@@ -94,7 +94,7 @@ A simple Etch a Sketch game, using the Turtle package
 A race between multiple turtles with different colors. You can bet on the winning color!
 
 ### 18. Snake game
-A classic snake game, like you can find on Nokia 3310. 
+A classic snake game, like you can find on Nokia 3310.
 
 ### 19. Pong game
 A classic pong game, with 2 players.
@@ -104,3 +104,6 @@ A fun and challenging game where the player controls a turtle trying to cross a 
 
 ### 21. NATO Alphabet
 The user inputs a word, and the program returns a phonetic code for this word (e.g: NATO - ['November', 'Alfa', 'Tango', 'Oscar'])
+
+### 22. Miles to Kilometers Converter
+A simple converter from miles to kilometers to work a bit with Tkinter.
