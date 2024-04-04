@@ -14,17 +14,41 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 
+def start_countdown():
+    count_down(WORK_MIN * 60)
+
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+import time
+import math
+
+def count_down(count):
+    if count >= 0:
+        root.after(1000, count_down, count - 1)
+        minutes = math.floor(count / 60)
+        seconds = count % 60
+        canva.itemconfig(countdown_label, text=f"{minutes}:{seconds}")
 
 # ---------------------------- UI SETUP ------------------------------- #
 root = Tk()
 root.title("Podomoro")
 root.config(padx=100, pady=50, bg=YELLOW)
 
+timer_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
+timer_label.grid(column=1, row=0)
+
 canva = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 image = PhotoImage(file="tomato.png")
 canva.create_image(100, 112, image=image)
-canva.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
-canva.pack()
+countdown_label = canva.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+canva.grid(column=1, row=1)
+
+start_button = Button(text="Start", highlightbackground=YELLOW, command=start_countdown)
+start_button.grid(column=0, row=2)
+
+reset_button = Button(text="Reset", highlightbackground=YELLOW)
+reset_button.grid(column=2, row=2)
+
+check_icon = Label(text="✔", fg=GREEN, bg=YELLOW)
+check_icon.grid(column=1, row=3)
 
 root.mainloop()
