@@ -26,6 +26,9 @@ def count_down(count):
         root.after(1000, count_down, count - 1)
         minutes = math.floor(count / 60)
         seconds = count % 60
+        if seconds <= 9:
+            seconds = f"0{seconds}"
+
         canva.itemconfig(countdown_label, text=f"{minutes}:{seconds}")
 
 # ---------------------------- UI SETUP ------------------------------- #
