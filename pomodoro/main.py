@@ -9,9 +9,22 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
+
 reps = 0
+timer = None
 
 # ---------------------------- TIMER RESET ------------------------------- #
+
+def reset():
+    global reps
+    global timer
+    reps = 0
+
+    root.after_cancel(timer)
+    timer_label.config(text="Timer", fg=GREEN)
+    canva.itemconfig(countdown_label, text="00:00")
+    check_icon.config(text="")
+
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 
@@ -40,8 +53,10 @@ import time
 import math
 
 def count_down(count):
+    global timer
+
     if count >= 0:
-        root.after(1000, count_down, count - 1)
+        timer = root.after(1000, count_down, count - 1)
         minutes = math.floor(count / 60)
         seconds = count % 60
         if seconds <= 9:
@@ -74,7 +89,7 @@ canva.grid(column=1, row=1)
 start_button = Button(text="Start", highlightbackground=YELLOW, command=start_countdown)
 start_button.grid(column=0, row=2)
 
-reset_button = Button(text="Reset", highlightbackground=YELLOW)
+reset_button = Button(text="Reset", highlightbackground=YELLOW, command=reset)
 reset_button.grid(column=2, row=2)
 
 check_icon = Label(fg=GREEN, bg=YELLOW)
