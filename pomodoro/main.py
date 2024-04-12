@@ -48,6 +48,14 @@ def count_down(count):
             seconds = f"0{seconds}"
 
         canva.itemconfig(countdown_label, text=f"{minutes}:{seconds}")
+    else:
+        start_countdown()
+        mark = ""
+        work_sessions = math.floor(reps/2)
+        for _ in range(work_sessions):
+            mark += "✔"
+        check_icon.config(text=mark)
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 root = Tk()
@@ -69,7 +77,7 @@ start_button.grid(column=0, row=2)
 reset_button = Button(text="Reset", highlightbackground=YELLOW)
 reset_button.grid(column=2, row=2)
 
-check_icon = Label(text="✔", fg=GREEN, bg=YELLOW)
+check_icon = Label(fg=GREEN, bg=YELLOW)
 check_icon.grid(column=1, row=3)
 
 root.mainloop()
