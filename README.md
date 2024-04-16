@@ -37,5 +37,10 @@ A classic pong game, with 2 players.
 ### 7. Turtle crossing game :star:
 A fun and challenging game where the player controls a turtle trying to cross a busy road. The goal is to safely guide the turtle to the other side without getting hit by passing cars.
 
+----------
+
 ### 8. Podomoro
 A simple but fully working Podomoro application, written with Tkinter.
+
+### 9. Password Manager
+A local password manager. You can generate a password, and it saves it in a text file, locally, on your computer.
