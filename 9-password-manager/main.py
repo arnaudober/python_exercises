@@ -51,6 +51,10 @@ def add():
   email = email_username_entry.get()
   password = password_entry.get()
 
+  if website is "" or email is "" or password is "":
+    messagebox.showerror(title="Ooops", message="Please don't leave any fields empty")
+    return
+
   is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \n"
                          f"Email: {email}\n"
                          f"Password: {password}\n"
