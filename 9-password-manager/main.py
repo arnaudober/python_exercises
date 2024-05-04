@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 DEFAULT_EMAIL = 'me@arnaudober.com'
 
@@ -50,13 +51,19 @@ def add():
   email = email_username_entry.get()
   password = password_entry.get()
 
-  with open('data.txt', 'a') as file:
-    file.write(f"{website}\t | \t{email}\t | \t{password}\n")
+  is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \n"
+                         f"Email: {email}\n"
+                         f"Password: {password}\n"
+                         f"Is it ok to save?")
 
-  website_entry.delete(0, END)
-  email_username_entry.delete(0, END)
-  email_username_entry.insert(0, DEFAULT_EMAIL)
-  password_entry.delete(0, END)
+  if is_ok:
+    with open('data.txt', 'a') as file:
+      file.write(f"{website}\t | \t{email}\t | \t{password}\n")
+
+    website_entry.delete(0, END)
+    email_username_entry.delete(0, END)
+    email_username_entry.insert(0, DEFAULT_EMAIL)
+    password_entry.delete(0, END)
 
 
 add_button = Button(text="Add", width=36, command=add)
