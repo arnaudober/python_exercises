@@ -1,5 +1,7 @@
 from tkinter import *
 
+DEFAULT_EMAIL = 'me@arnaudober.com'
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -21,6 +23,7 @@ website_label.grid(row=1, column=0, sticky="E")
 
 website_entry = Entry(width=35)
 website_entry.grid(row=1, column=1, columnspan=2, sticky="EW")
+website_entry.focus()
 
 # 3. Email/Username
 email_username_label = Label(text="Email/Username:")
@@ -28,6 +31,7 @@ email_username_label.grid(row=2, column=0, sticky="E")
 
 email_username_entry = Entry(width=35)
 email_username_entry.grid(row=2, column=1, columnspan=2, sticky="EW")
+email_username_entry.insert(0, DEFAULT_EMAIL)
 
 # 4. Password
 password_label = Label(text="Password:")
@@ -40,7 +44,22 @@ generate_password_button = Button(text="Generate Password")
 generate_password_button.grid(row=3, column=2)
 
 # 5. Add Button
-add_button = Button(text="Add", width=36)
+
+def add():
+  website = website_entry.get()
+  email = email_username_entry.get()
+  password = password_entry.get()
+
+  with open('data.txt', 'a') as file:
+    file.write(f"{website}\t | \t{email}\t | \t{password}\n")
+
+  website_entry.delete(0, END)
+  email_username_entry.delete(0, END)
+  email_username_entry.insert(0, DEFAULT_EMAIL)
+  password_entry.delete(0, END)
+
+
+add_button = Button(text="Add", width=36, command=add)
 add_button.grid(row=4, column=1, columnspan=2, sticky="EW")
 
 window.mainloop()
