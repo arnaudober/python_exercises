@@ -1,9 +1,15 @@
 from tkinter import *
 from tkinter import messagebox
+import password_generator as pg
+import pyperclip
 
 DEFAULT_EMAIL = 'me@arnaudober.com'
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+def generate_password():
+  password = pg.generate_password()
+  password_entry.insert(0, password)
+  pyperclip.copy(password)
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
@@ -41,7 +47,7 @@ password_label.grid(row=3, column=0, sticky="E")
 password_entry = Entry(width=22)
 password_entry.grid(row=3, column=1)
 
-generate_password_button = Button(text="Generate Password")
+generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(row=3, column=2)
 
 # 5. Add Button
