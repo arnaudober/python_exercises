@@ -1,3 +1,4 @@
+import json
 from tkinter import *
 from tkinter import messagebox
 import password_generator as pg
@@ -56,19 +57,19 @@ def add():
   website = website_entry.get()
   email = email_username_entry.get()
   password = password_entry.get()
+  entry = {
+    website: { "email": email, "password": password }
+  }
 
   if website is "" or email is "" or password is "":
     messagebox.showerror(title="Ooops", message="Please don't leave any fields empty")
-    return
+  else:
+    with open('data.json', 'r') as file:
+      data = json.load(file)
+      data.update(entry)
 
-  is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \n"
-                         f"Email: {email}\n"
-                         f"Password: {password}\n"
-                         f"Is it ok to save?")
-
-  if is_ok:
-    with open('data.txt', 'a') as file:
-      file.write(f"{website}\t | \t{email}\t | \t{password}\n")
+    with open('data.json', 'w') as file:
+      json.dump(data, file, indent=4)
 
     website_entry.delete(0, END)
     email_username_entry.delete(0, END)
