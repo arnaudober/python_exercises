@@ -29,16 +29,38 @@ canva.grid(row=0, column=1)
 website_label = Label(text="Website:")
 website_label.grid(row=1, column=0, sticky="E")
 
-website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2, sticky="EW")
+website_entry = Entry(width=22)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
+
+# Search Button
+
+def search():
+  try:
+    with open('data.json', 'r') as file:
+      data = json.load(file)
+  except FileNotFoundError:
+    messagebox.showerror(title="Ooops", message="No Data File Found")
+  else:
+    # Found the data file
+    website = website_entry.get()
+    if website in data:
+      email = data[website]['email']
+      password = data[website]['password']
+      messagebox.showinfo(title=website, message=f"Email: {email}\nPassword: {password}")
+    else:
+      messagebox.showerror(title="Ooops", message=f"No details for {website} exists")
+
+
+search_button = Button(text="Search", command=search)
+search_button.grid(row=1, column=2, sticky="EW")
 
 # 3. Email/Username
 email_username_label = Label(text="Email/Username:")
 email_username_label.grid(row=2, column=0, sticky="E")
 
-email_username_entry = Entry(width=35)
-email_username_entry.grid(row=2, column=1, columnspan=2, sticky="EW")
+email_username_entry = Entry(width=22)
+email_username_entry.grid(row=2, column=1, sticky="EW")
 email_username_entry.insert(0, DEFAULT_EMAIL)
 
 # 4. Password
