@@ -64,17 +64,22 @@ def add():
   if website is "" or email is "" or password is "":
     messagebox.showerror(title="Ooops", message="Please don't leave any fields empty")
   else:
-    with open('data.json', 'r') as file:
-      data = json.load(file)
+    try:
+      with open('data.json', 'r') as file:
+        data = json.load(file)
+    except FileNotFoundError:
+      with open('data.json', 'w') as file:
+        json.dump(entry, file, indent=4)
+    else:
       data.update(entry)
 
-    with open('data.json', 'w') as file:
-      json.dump(data, file, indent=4)
-
-    website_entry.delete(0, END)
-    email_username_entry.delete(0, END)
-    email_username_entry.insert(0, DEFAULT_EMAIL)
-    password_entry.delete(0, END)
+      with open('data.json', 'w') as file:
+        json.dump(data, file, indent=4)
+    finally:
+      website_entry.delete(0, END)
+      email_username_entry.delete(0, END)
+      email_username_entry.insert(0, DEFAULT_EMAIL)
+      password_entry.delete(0, END)
 
 
 add_button = Button(text="Add", width=36, command=add)
