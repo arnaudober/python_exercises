@@ -15,12 +15,23 @@ card_front_image = PhotoImage(file="images/card_front.png")
 card_back_image = PhotoImage(file="images/card_back.png")
 
 # Read data
-data = pandas.read_csv("data/french_words.csv")
+try:
+  data = pandas.read_csv("data/words_to_learn.csv")
+except FileNotFoundError:
+  data = pandas.read_csv("data/french_words.csv")
+except pandas.errors.EmptyDataError:
+  data = pandas.read_csv("data/french_words.csv")
 data_dict = data.to_dict(orient="records")
 
 current_card = {}
 
 # Functions
+def save_progress():
+  data_dict.remove(current_card)
+  data = pandas.DataFrame(data_dict)
+  data.to_csv("data/words_to_learn.csv", index=False)
+  next_card()
+
 def next_card():
   global current_card, flip_timer
 
@@ -54,7 +65,7 @@ wrong_button = Button(image=wrong_image, bg=BACKGROUND_COLOR, highlightthickness
 wrong_button.grid(row=1, column=0)
 
 right_image = PhotoImage(file="images/right.png")
-right_button = Button(image=right_image, bg=BACKGROUND_COLOR, highlightthickness=0, border=0, command=next_card)
+right_button = Button(image=right_image, bg=BACKGROUND_COLOR, highlightthickness=0, border=0, command=save_progress)
 right_button.grid(row=1, column=1)
 
 next_card()
