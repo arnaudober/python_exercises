@@ -3,16 +3,9 @@ import datetime as dt
 import random
 import constants as constants
 
-with open("quotes.txt", "r") as file:
-  quotes = file.readlines()
-
-  now = dt.datetime.now()
-  week_day = now.weekday()
-
-  if week_day == 0:
-    quote = random.choice(quotes)
-
-    with smtplib.SMTP("smtp-mail.outlook.com", port=587) as connection:
-      connection.starttls()
-      connection.login(user=constants.EMAIL_FROM, password=constants.PASSWORD)
-      connection.sendmail(from_addr=constants.EMAIL_FROM, to_addrs=constants.EMAIL_TO, msg="Subject:Quote of the week!\n\n" + quote)
+# TODO:
+# 1. Open the CSV file to get the information.
+# 2. For each birthday that is today:
+#   a. Randomly choose a template file in /letter_templates.
+#   b. Replace the variable with the name of the CSV file.
+#   c. Send the message to the email from the CSV file.
