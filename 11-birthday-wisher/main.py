@@ -1,6 +1,10 @@
 import datetime
+import random
+import smtplib
 
 import pandas
+
+from constants import *
 
 
 def get_today():
@@ -18,15 +22,17 @@ def get_birthdays_to_celebrate():
             "name": person["name"],
             "email": person["email"],
         }
-        for person in data_dict
-        if (person["month"], person["day"]) == get_today()
+        for birthday in data_dict
+        if (birthday["month"], birthday["day"]) == get_today()
     }
 
     return today_birthdays
 
 
 def get_random_template():
-    return "Hello [NAME]!"
+    file_path = f"letter_templates/letter_{random.randint(1, 3)}.txt"
+    with open(file_path, "r") as f:
+        return f.read()
 
 
 def replace_variable_in_template(person_name, template):
@@ -34,9 +40,14 @@ def replace_variable_in_template(person_name, template):
 
 
 def send_message(email_address, message):
-    print(f"Sending message to {email_address}")
-    print(f"Message: {message}")
-    return
+    with smtplib.SMTP("smtp-mail.outlook.com", 587) as connection:
+        connection.starttls()
+        connection.login(user=EMAIL_FROM, password=PASSWORD)
+        connection.sendmail(
+            from_addr=EMAIL_FROM,
+            to_addrs=email_address,
+            msg=f"Subject:Happy birthday!\n\n{message}",
+        )
 
 
 # TODO:
