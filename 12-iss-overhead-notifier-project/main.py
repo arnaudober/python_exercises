@@ -27,6 +27,7 @@ quote_text = canvas.create_text(
 )
 canvas.grid(row=0, column=0)
 
+# We make an initial call so the empty text is replaced with a real quote without having to click on the button first.
 get_quote()
 
 kanye_img = PhotoImage(file="kanye.png")
