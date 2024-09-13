@@ -29,18 +29,32 @@ A simple coffee machine program. The user can choose between 3 types of coffee, 
 money. (procedural and OOP versions)
 
 ### 5. Snake game :star:
+
 A classic snake game, like you can find on Nokia 3310.
 
 ### 6. Pong game
+
 A classic pong game, with 2 players.
 
 ### 7. Turtle crossing game :star:
-A fun and challenging game where the player controls a turtle trying to cross a busy road. The goal is to safely guide the turtle to the other side without getting hit by passing cars.
+
+A fun and challenging game where the player controls a turtle trying to cross a busy road. The goal is to safely guide
+the turtle to the other side without getting hit by passing cars.
 
 ----------
 
 ### 8. Podomoro
+
 A simple but fully working Podomoro application, written with Tkinter.
 
 ### 9. Password Manager
+
 A local password manager. You can generate a password, and it saves it in a text file, locally, on your computer.
+
+### 10. Flash card
+
+A flash card app. English vs French, dictionary locally stored.
+
+### 11. Birthday wisher
+
+A birthday wisher app. Sends an email to the contacts who have their birthday today. The list is locally saved.
